@@ -45,17 +45,17 @@ Use the file handler service in a controller to resize files
 // Resize based on pixels
 $resizer = $this->get('ticketpark.image.resizer');
 $pathToFileOrUrl = '/path/to/image.png'; // or url: http://foo.com/someimage.jpg
-$filter = 'crop'; // 'crop' or 'resize'
+$style = 'crop'; // 'crop' or 'resize'
 $maxSizeInPixel = 300;
-$pathToResizedImage = $resizer->resize($pathToFileOrUrl, $filter, $maxSizeInPixel);
+$pathToResizedImage = $resizer->resize($pathToFileOrUrl, $style, $maxSizeInPixel);
 
 // Resize based on pixel density (dpi)
 // Learn more here: http://en.wikipedia.org/wiki/Dots_per_inch
 $pathToFileOrUrl = '/path/to/image.png'; // or url: http://foo.com/someimage.jpg
-$filter = 'crop'; // 'crop' or 'resize'
+$style = 'crop'; // 'crop' or 'resize'
 $maxSizeInMm = 50;
 $dpi = 150; // values between 150 and 300 are usually used for printing
-$pathToResizedImage = $resizer->resizeMm($pathToFileOrUrl, $filter, $maxSizeInMm, $dpi);
+$pathToResizedImage = $resizer->resizeMm($pathToFileOrUrl, $style, $maxSizeInMm, $dpi);
 ```
     
 There is also a Twig extension, examples:
