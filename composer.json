@@ -1,0 +1,36 @@
+{
+    "name": "ticketpark/image-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundle assists in manipulating images",
+    "keywords": ["image", "image manipulation"],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Ticketpark contributors and others",
+            "homepage": "https://github.com/Ticketpark/ImageBundle/contributors"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3.2",
+        "imagine/Imagine": "0.5.*",
+        "ticketpark/file-bundle": "dev-master",
+        "symfony/dependency-injection": ">=2.3,<2.5-dev",
+        "symfony/http-foundation": ">=2.3,<2.5-dev"
+    },
+
+    "require-dev": {
+        "twig/twig": ">=1.0,<2.0-dev"
+    },
+
+    "suggest": {
+        "twig/twig": ">=1.0,<2.0-dev"
+    },
+
+    "autoload": {
+        "psr-0": { "Ticketpark\\ImageBundle": "" }
+    },
+
+    "target-dir": "Ticketpark/ImageBundle"
+}

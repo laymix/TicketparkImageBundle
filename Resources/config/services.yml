@@ -1,0 +1,14 @@
+parameters:
+    ticketpark.image.resizer.class:        Ticketpark\ImageBundle\Resizer\Resizer
+    ticketpark.twig.image_resizer_extension.class: Ticketpark\ImageBundle\Twig\ResizerExtension
+
+services:
+    ticketpark.image.resizer:
+        class: %ticketpark.image.resizer.class%
+        arguments: [@ticketpark.file.handler]
+
+    ticketpark.twig.image_resizer_extension:
+            class: %ticketpark.twig.image_resizer_extension.class%
+            arguments: [@service_container]
+            tags:
+                - { name: twig.extension }
